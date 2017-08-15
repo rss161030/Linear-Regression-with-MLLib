@@ -21,9 +21,7 @@ object LinearRegressionRDD {
     
     // This reads in x,y number pairs where x is the "label" we want to predict
     // and y is the "feature" which is some associated value we can use to predict the label by
-    // Note that currently MLLib only works properly if this input data is first scaled such that
-    // it ranges from -1 to 1 and has a mean of 0, more or less! You need to scale it down, then
-    // remember to scale it back up later.
+    // it ranges from -1 to 1 and has a mean of 0, more or less! You need to scale it down
     val trainingLines = sc.textFile("../regression.txt")
     
     // And another RDD containing our "test" data that we want to predict values for using our linear model.
